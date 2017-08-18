@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+document.addEventListener('DOMContentLoaded', ()=>{
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((el) => {
+      el.addEventListener('mouseover', (event) => {
+        const currentCard = event.target;
+
+        const description = currentCard.querySelector('.card-description');
+        description.classList.toggle("opacity");
+    })
+  })
+})
